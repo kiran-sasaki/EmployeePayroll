@@ -117,7 +117,7 @@ namespace EmpPayrollService
                         {
                             Name = Convert.ToString(dr["Name"]),
                             Salary = Convert.ToInt32(dr["Salary"]),
-                            Gender = Convert.ToChar(dr["Gende"]),
+                            Gender = Convert.ToChar(dr["Gender"]),
                             Address = Convert.ToString(dr["Address"]),
                             PhoneNumber = Convert.ToString(dr["PhoneNumber"]),
                             Department = Convert.ToString(dr["Department"]),

@@ -17,7 +17,7 @@
             roll.TaxablePay = 1000;
             roll.IncomeTax = 1000;
             roll.NetPay = 12000;
-            repository.AddEmployee(roll);
+            //repository.AddEmployee(roll);
             roll.Name = "Marnus";
             roll.Address = "Chetpet";
             roll.PhoneNumber = "786754344325";
