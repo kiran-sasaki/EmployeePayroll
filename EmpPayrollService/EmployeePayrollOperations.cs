@@ -19,6 +19,19 @@ namespace EmpPayrollService
             });
             Console.WriteLine(this.EmployeePayrollList.ToString());
         }
+        public void AddEmployeeMethodWithThread(List<PayRoll> EmployeePayrollList)
+        {
+            EmployeePayrollList.ForEach(data =>
+            {
+                Task thread = new Task(() =>
+                {
+                    Console.WriteLine("Employee Being Added" + data.Name);
+                    this.AddEmployeePayroll(data);
+                    Console.WriteLine("Employee Added" + data.Name);
+                });
+                thread.Start();
+            });
+        }
         public void AddEmployeePayroll(PayRoll roll)
         {
             EmployeePayrollList.Add(roll);
